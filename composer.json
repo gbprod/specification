@@ -2,9 +2,6 @@
     "name": "gbprod/specification",
     "description": "Yet another specification pattern implementation",
     "type": "library",
-    "require-dev": {
-        "phpunit/phpunit": "4.*"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +10,12 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "satooshi/php-coveralls": "^1.0"
+    },
     "autoload": {
         "psr-4": {
             "GBProd\\": "src/",
