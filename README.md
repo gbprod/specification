@@ -1,2 +1,64 @@
-# specification
-Yet another specification pattern implementation in PHP
+# [WIP] Specification
+
+Yet another [specification pattern](http://en.wikipedia.org/wiki/Specification_pattern) implementation in PHP.
+
+## Usage
+
+### Create a Specification
+
+```php
+<?php
+
+use GBProd\Specification\CompositeSpecification;
+
+class PriceGreaterThan extends CompositeSpecification
+{
+    private $threshold;
+    
+    public function __construct($threshold)
+    {
+        $this->threshold = $threshold;
+    }
+    
+    public function isSatisfiedBy($product)
+    {
+        return $product->getPrice() > $this->threshold;
+    }
+}
+```
+
+### Compose your specifications
+
+```php
+$expensive = new PriceGreaterThan(1000);
+$available = new IsAvailable();
+$hightStock = new StockGreaterThan(4);
+
+
+$lowStockExpensiveProduct = $expensive
+    ->andX($available)
+    ->andX($hightStock->not())
+;
+```
+
+### Use it !
+
+```php
+foreach($products as $product) {
+    if ($lowStockExpensiveProduct->isSatisfiedBy($product)) {
+        $this->makeSomethingAwesome($product);
+    }
+}
+```
+
+## Requirements
+
+ * PHP 5.5+
+
+## Installation
+
+### Using composer
+
+```bash
+composer require gbprod/specification
+```

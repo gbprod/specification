@@ -1,0 +1,23 @@
+{
+    "name": "gbprod/specification",
+    "description": "Yet another specification pattern implementation",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "GBProd",
+            "email": "contact@gb-prod.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "GBProd\\": "src/",
+            "Tests\\GBProd\\": "tests/"
+        }
+    }
+}
