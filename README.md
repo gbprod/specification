@@ -1,4 +1,4 @@
-# [WIP] Specification
+# Specification
 
 Yet another [specification pattern](http://en.wikipedia.org/wiki/Specification_pattern) implementation in PHP.
 
