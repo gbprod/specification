@@ -9,7 +9,7 @@ use GBProd\Specification\Not;
  * 
  * @author gbprod <contact@gb-prod.fr>
  */
-class NotTest extends \PHPUnit_Framework_TestCase
+class NotTest extends SpecificationTest
 {
     public function testConstruction()
     {
@@ -22,32 +22,18 @@ class NotTest extends \PHPUnit_Framework_TestCase
     {
         $candidate = new \stdClass();
         
-        $wrappedSpec = $this->createWrappedSpecification($candidate, true);
+        $wrappedSpec = $this->createSpecification($candidate, true);
         
         $spec = new Not($wrappedSpec);
         
         $this->assertFalse($spec->isSatisfiedBy($candidate));
     }
-    
-    private function createWrappedSpecification($candidate, $value)
-    {
-        $wrappedSpec = $this->getMock('GBProd\Specification\Specification');
 
-        $wrappedSpec
-            ->expects($this->any())
-            ->method('isSatisfiedBy')
-            ->with($candidate)
-            ->willReturn($value)
-        ;
-
-        return $wrappedSpec;
-    }
-    
     public function testIsSatisfiedByReturnsTrueIfWrappedIsFalse()
     {
         $candidate = new \stdClass();
         
-        $wrappedSpec = $this->createWrappedSpecification($candidate, false);
+        $wrappedSpec = $this->createSpecification($candidate, false);
         
         $spec = new Not($wrappedSpec);
         
