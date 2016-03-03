@@ -18,7 +18,7 @@ abstract class CompositeSpecification implements Specification
      */
     public function andX(Specification $specification)
     {
-        
+        return new AndX($this, $specification);
     }
     
     /**
@@ -30,7 +30,7 @@ abstract class CompositeSpecification implements Specification
      */
     public function orX(Specification $specification)
     {
-        
+        return new OrX($this, $specification);
     }
     
     /**
@@ -38,8 +38,8 @@ abstract class CompositeSpecification implements Specification
      *
      * @return Not
      */
-    public function not(Specification $specification)
+    public function not()
     {
-        
+        return new Not($this);
     }
 }
