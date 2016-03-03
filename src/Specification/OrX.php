@@ -12,12 +12,12 @@ class OrX extends CompositeSpecification
     /**
      * @var Specification
      */
-    private $firstWrappedSpecification;
+    private $firstSpecification;
     
     /**
      * @var Specification
      */
-    private $secondWrappedSpecification;
+    private $secondSpecification;
     
     /**
      * @param Specification $specification
