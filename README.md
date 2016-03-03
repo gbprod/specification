@@ -2,6 +2,10 @@
 
 Yet another [specification pattern](http://en.wikipedia.org/wiki/Specification_pattern) implementation in PHP.
 
+[![Build Status](https://travis-ci.org/gbprod/specification.svg?branch=master)](https://travis-ci.org/gbprod/specification)
+
+[![Code Climate](https://codeclimate.com/github/gbprod/specification/badges/gpa.svg)](https://codeclimate.com/github/gbprod/specification)
+
 ## Usage
 
 ### Create a Specification
