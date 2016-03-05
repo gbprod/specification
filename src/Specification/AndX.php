@@ -7,25 +7,25 @@ namespace GBProd\Specification;
  * 
  * @author gbprod <contact@gb-prod.fr>
  */
-class AndX extends CompositeSpecification
+final class AndX extends CompositeSpecification
 {
     /**
      * @var Specification
      */
-    private $firstSpecification;
+    private $firstPart;
     
     /**
      * @var Specification
      */
-    private $secondSpecification;
+    private $secondPart;
     
     /**
      * @param Specification $specification
      */
-    public function __construct(Specification $firstSpecification, Specification $secondSpecification)
+    public function __construct(Specification $firstPart, Specification $secondPart)
     {
-        $this->firstSpecification = $firstSpecification;
-        $this->secondSpecification = $secondSpecification;
+        $this->firstPart  = $firstPart;
+        $this->secondPart = $secondPart;
     }
         
     /**
@@ -33,8 +33,28 @@ class AndX extends CompositeSpecification
      */
     public function isSatisfiedBy($candidate)
     {
-        return $this->firstSpecification->isSatisfiedBy($candidate)
-            && $this->secondSpecification->isSatisfiedBy($candidate)
+        return $this->firstPart->isSatisfiedBy($candidate)
+            && $this->secondPart->isSatisfiedBy($candidate)
         ;
+    }
+    
+    /**
+     * Get the first part of the condition
+     * 
+     * @return Specification
+     */
+    public function getFirstPart()
+    {
+        return $this->firstPart;
+    }
+    
+    /**
+     * Get the second part of the condition
+     * 
+     * @return Specification
+     */
+    public function getSecondPart()
+    {
+        return $this->secondPart;
     }
 }

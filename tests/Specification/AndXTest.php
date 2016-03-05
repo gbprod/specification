@@ -13,10 +13,14 @@ class AndXTest extends SpecificationTest
 {
     public function testConstruction()
     {
-        $spec = new AndX(
-            $this->getMock('GBProd\Specification\Specification'),
-            $this->getMock('GBProd\Specification\Specification')
-        );
+        $firstPart  = $this->getMock('GBProd\Specification\Specification');
+        $secondPart = $this->getMock('GBProd\Specification\Specification');
+
+
+        $spec = new AndX($firstPart, $secondPart);
+        
+        $this->assertEquals($firstPart, $spec->getFirstPart());
+        $this->assertEquals($secondPart, $spec->getSecondPart());
     }
     
     public function testIsSatisfiedByReturnsTrueIfBothAreTrue()

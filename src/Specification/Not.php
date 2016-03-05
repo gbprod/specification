@@ -29,4 +29,14 @@ class Not extends CompositeSpecification
     {
         return !$this->wrappedSpecification->isSatisfiedBy($candidate);
     }
+    
+    /**
+     * Get the wrapped specification
+     * 
+     * @return Specification
+     */
+    public function getWrappedSpecification()
+    {
+       return $this->wrappedSpecification; 
+    }
 }
