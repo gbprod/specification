@@ -13,9 +13,11 @@ class NotTest extends SpecificationTest
 {
     public function testConstruction()
     {
-        $spec = new Not(
-            $this->getMock('GBProd\Specification\Specification')
-        );
+        $wrapped = $this->getMock('GBProd\Specification\Specification');
+        
+        $spec = new Not($wrapped);
+        
+        $this->assertEquals($wrapped, $spec->getWrappedSpecification());
     }
     
     public function testIsSatisfiedByReturnsFalseIfWrappedIsTrue()
