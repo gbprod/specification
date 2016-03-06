@@ -16,7 +16,6 @@ class AndXTest extends SpecificationTest
         $firstPart  = $this->getMock('GBProd\Specification\Specification');
         $secondPart = $this->getMock('GBProd\Specification\Specification');
 
-
         $spec = new AndX($firstPart, $secondPart);
         
         $this->assertEquals($firstPart, $spec->getFirstPart());

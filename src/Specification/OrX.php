@@ -7,7 +7,7 @@ namespace GBProd\Specification;
  * 
  * @author gbprod <contact@gb-prod.fr>
  */
-class OrX extends CompositeSpecification
+final class OrX extends CompositeSpecification
 {
     /**
      * @var Specification

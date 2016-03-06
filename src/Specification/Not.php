@@ -7,7 +7,7 @@ namespace GBProd\Specification;
  * 
  * @author gbprod <contact@gb-prod.fr>
  */
-class Not extends CompositeSpecification
+final class Not extends CompositeSpecification
 {
     /**
      * @var Specification
