@@ -20,7 +20,8 @@ final class AndX extends CompositeSpecification
     private $secondPart;
     
     /**
-     * @param Specification $specification
+     * @param Specification $firstPart
+     * @param Specification $secondPart
      */
     public function __construct(Specification $firstPart, Specification $secondPart)
     {

@@ -16,5 +16,5 @@ interface Specification
      * 
      * @return boolean
      */
-    public function isSatisfiedBy($value);
+    public function isSatisfiedBy($candidate);
 }
