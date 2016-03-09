@@ -7,11 +7,11 @@ php:
 before_script:
     - composer self-update
     - composer install --no-interaction --prefer-source --dev
-    - mkdir -p build/logs
 
 script: 
-    - vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
+    - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
     
 after_success:
-    - travis_retry php vendor/bin/coveralls -v
+    - wget https://scrutinizer-ci.com/ocular.phar
+    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
   
