@@ -1,0 +1,13 @@
+# Change Log
+All notable changes to this project will be documented in this file based on the [Keep a Changelog](http://keepachangelog.com/) Standard.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+## [Unreleased](https://github.com/gbprod/specification/compare/v0.1.2...HEAD)
+
+### Added
+- Version eye badge
+- Changelog
+
+### Changed
+- Scrutinizer use PSR2 codesniffer
+- Use codecov instead of scrutinizer for coverage
