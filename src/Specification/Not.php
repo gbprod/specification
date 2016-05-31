@@ -37,6 +37,6 @@ final class Not extends CompositeSpecification
      */
     public function getWrappedSpecification()
     {
-       return $this->wrappedSpecification; 
+        return $this->wrappedSpecification; 
     }
 }
