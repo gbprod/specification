@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GBProd\Specification;
 
 /**
  * Not specification implementation
- * 
+ *
  * @author gbprod <contact@gb-prod.fr>
  */
 final class Not extends CompositeSpecification
@@ -13,7 +15,7 @@ final class Not extends CompositeSpecification
      * @var Specification
      */
     private $wrappedSpecification;
-    
+
     /**
      * @param Specification $specification
      */
@@ -21,22 +23,22 @@ final class Not extends CompositeSpecification
     {
         $this->wrappedSpecification = $specification;
     }
-        
+
     /**
      * {inheritdoc}
      */
-    public function isSatisfiedBy($candidate)
+    public function isSatisfiedBy($candidate): bool
     {
         return !$this->wrappedSpecification->isSatisfiedBy($candidate);
     }
-    
+
     /**
      * Get the wrapped specification
-     * 
+     *
      * @return Specification
      */
-    public function getWrappedSpecification()
+    public function getWrappedSpecification(): Specification
     {
-        return $this->wrappedSpecification; 
+        return $this->wrappedSpecification;
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\GBProd\Specification;
 
 use GBProd\Specification\Not;

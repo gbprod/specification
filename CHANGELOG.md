@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/gbprod/specification/compare/v1.0.0...HEAD)
 
+### Added
+ - PHP7 return types and strict type mode
+
+### Removed
+ - Drop php 5.* compatibility
+
 ## [v1.0.0](https://github.com/gbprod/specification/compare/v0.1.3...v1.0.0)
 
 ### Added
