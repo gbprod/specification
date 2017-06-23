@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/gbprod/specification/compare/v0.1.3...HEAD)
 
+ - Add contributing and Makefile
  - Drop php 5.5
 
 ## [0.1.3](https://github.com/gbprod/specification/compare/v0.1.2...v0.1.3)
