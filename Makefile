@@ -1,15 +1,18 @@
 .PHONY: install test-unit test-coverage
 
+PHP?=php
+COMPOSER?=composer
+
 install: vendor
 
 test-unit: vendor
-	vendor/bin/phpunit
+	$(PHP) vendor/bin/phpunit
 
 test-coverage: vendor
-	vendor/bin/phpunit --coverage-text
+	$(PHP) vendor/bin/phpunit --coverage-text
 
 vendor: composer.lock
-	composer install
+	$(COMPOSER) install
 
 composer.lock: composer.json
-	composer update
+	$(COMPOSER) update

@@ -7,9 +7,9 @@ Yet another [specification pattern](http://en.wikipedia.org/wiki/Specification_p
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gbprod/specification/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gbprod/specification/?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/574a9ca9ce8d0e004505fa5e/badge.svg)](https://www.versioneye.com/user/projects/574a9ca9ce8d0e004505fa5e)
 
-[![Latest Stable Version](https://poser.pugx.org/gbprod/specification/v/stable)](https://packagist.org/packages/gbprod/specification) 
-[![Total Downloads](https://poser.pugx.org/gbprod/specification/downloads)](https://packagist.org/packages/gbprod/specification) 
-[![Latest Unstable Version](https://poser.pugx.org/gbprod/specification/v/unstable)](https://packagist.org/packages/gbprod/specification) 
+[![Latest Stable Version](https://poser.pugx.org/gbprod/specification/v/stable)](https://packagist.org/packages/gbprod/specification)
+[![Total Downloads](https://poser.pugx.org/gbprod/specification/downloads)](https://packagist.org/packages/gbprod/specification)
+[![Latest Unstable Version](https://poser.pugx.org/gbprod/specification/v/unstable)](https://packagist.org/packages/gbprod/specification)
 [![License](https://poser.pugx.org/gbprod/specification/license)](https://packagist.org/packages/gbprod/specification)
 
 ## Usage
@@ -24,13 +24,13 @@ use GBProd\Specification\CompositeSpecification;
 class PriceGreaterThan extends CompositeSpecification
 {
     private $threshold;
-    
+
     public function __construct($threshold)
     {
         $this->threshold = $threshold;
     }
-    
-    public function isSatisfiedBy($product)
+
+    public function isSatisfiedBy($product): bool
     {
         return $product->getPrice() > $this->threshold;
     }
@@ -63,7 +63,9 @@ foreach($products as $product) {
 
 ## Requirements
 
- * PHP 5.5+
+ * PHP 7.0+
+
+For PHP 5 compatibility, use [version 1.0](https://github.com/gbprod/specification/tree/v1.0.0)
 
 ## Installation
 
