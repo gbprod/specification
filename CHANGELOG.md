@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/gbprod/specification/compare/v2.0.1...HEAD)
 
+ - Changing licence
+
 ## [v2.0.1](https://github.com/gbprod/specification/compare/v2.0.0...v2.0.1)
  
  - Better deps

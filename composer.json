@@ -2,7 +2,7 @@
     "name": "gbprod/specification",
     "description": "Yet another specification pattern implementation",
     "type": "library",
-    "license": "MIT",
+    "license": "WTFPL",
     "authors": [
         {
             "name": "GBProd",
